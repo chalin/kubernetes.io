@@ -41,7 +41,7 @@ COPY --from=0 /go/bin/hugo /usr/local/bin/hugo
 
 WORKDIR /src
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm ci --omit=dev
 
 USER hugo:hugo
 
