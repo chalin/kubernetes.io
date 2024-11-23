@@ -36,7 +36,7 @@
     {{ if not (.Param "auto_generated") }}
     <a href="{{ $editURL }}" target="_blank"><i class="fa-solid fa-pen-to-square fa-fw"></i> {{ T "post_edit_this" }}</a>
     {{- if .HasShortcode "thirdparty-content" -}}
-    <a href="#third-party-content-disclaimer" class="third-party-disclaimer-link"><i class="fa-solid fa-circle fa-fw"></i> {{ T "thirdparty_message_edit_disclaimer" | safeHTML }}</a>
+    <a href="#third-party-content-disclaimer" class="third-party-disclaimer-link"><i class="d-inline-block fa-fw"></i> {{ T "thirdparty_message_edit_disclaimer" | safeHTML }}</a>
     {{- end }}
 
     <a href="{{ $newPageURL }}" target="_blank"><i class="fa-solid fa-pen-to-square fa-fw"></i> {{ T "post_create_child_page" }}</a>
@@ -48,7 +48,7 @@
       <a href="{{ $project_issueURL }}" target="_blank"><i class="fa-solid fa-list-check fa-fw"></i> {{ T "post_create_project_issue" }}</a>
     {{ end }}
     {{- if (.Param "auto_generated") -}}
-    <a href="#auto-generated-edit-notice" class="auto-generated-notice-link"><i class="fa-solid fa-circle fa-fw"></i> {{ T "auto_generated_edit_notice" | safeHTML }}</a>
+    <a href="#auto-generated-edit-notice" class="auto-generated-notice-link"><i class="d-inline-block fa-fw"></i> {{ T "auto_generated_edit_notice" | safeHTML }}</a>
     {{- end -}}
 
   {{ end }}
